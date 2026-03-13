@@ -30,35 +30,29 @@ Model Context Protocol (MCP) server providing structured access to **PrimeVue co
 
 ## ⚙️ Usage
 
-### 🧠 Add to Cursor (Recommended)
-Click below to connect this MCP directly to Cursor:
+### Global Installation
 
-👉 [**Add PrimeVue MCP to Cursor**](cursor://add-mcp?url=https://primevue-mcp-1.enol.dev)
+To use this MCP server across your system, install it globally using `pnpm`:
 
-<details>
-<summary>🔧 Alternative: Copy MCP Configuration</summary>
+```bash
+pnpm add -g /path/to/repo/primevue-mcp-v3-1.0.0.tgz
+```
+
+*(Note: In the future, this will be published to npm. For now, pack the project with `pnpm pack` and install the tarball globally).*
+
+### 🛸 Setting up with Google Antigravity
+
+Add the following configuration to your `~/.gemini/antigravity/mcp_config.json` file to enable the PrimeVue MCP server:
 
 ```json
 {
-  "servers": [
-    {
-      "type": "http",
-      "url": "https://primevue-mcp-1.enol.dev"
+  "mcpServers": {
+    "primevue-mcp": {
+      "command": "primevue-mcp",
+      "args": []
     }
-  ]
+  }
 }
 ```
 
-Add this to your `.well-known/mcp.json` file in Cursor.
-</details>
-
-Or configure it manually in your `.well-known/mcp.json`:
-```json
-{
-  "servers": [
-    {
-      "type": "http",
-      "url": "https://primevue-mcp-1.onrender.com"
-    }
-  ]
-}
+Once added, restart the Antigravity agent or reload the configuration. You can now use tools like `search_components`, `search_icons`, and read PrimeVue resources directly within Antigravity!
