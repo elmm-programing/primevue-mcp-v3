@@ -5,7 +5,8 @@ const DATASETS = {
   api: path.resolve("data/api.json"),
   docs: path.resolve("data/docs.json"),
   logic: path.resolve("data/logic.json"),
-  tokens: path.resolve("data/tokens.json")
+  tokens: path.resolve("data/tokens.json"),
+  icons: path.resolve("data/icons.json")
 };
 
 const OUTPUT_PATH = path.resolve("data/combined.json");
@@ -23,6 +24,7 @@ interface ComponentData {
     variables?: string[];
   };
   tokens?: Record<string, string>;
+  icons?: string[];
 }
 
 /**
@@ -47,6 +49,15 @@ function mergeDatasets(): Record<string, ComponentData> {
   const docs = readJsonSafe(DATASETS.docs);
   const logic = readJsonSafe(DATASETS.logic);
   const tokens = readJsonSafe(DATASETS.tokens);
+  
+  let icons: string[] = [];
+  try {
+    if (fs.existsSync(DATASETS.icons)) {
+      icons = JSON.parse(fs.readFileSync(DATASETS.icons, "utf8"));
+    }
+  } catch (err) {
+    console.warn(`⚠️ Failed to read or parse icons component:`, err);
+  }
 
   const merged: Record<string, ComponentData> = {};
 
@@ -66,6 +77,10 @@ function mergeDatasets(): Record<string, ComponentData> {
 
   if (Object.keys(tokens).length > 0) {
     merged["_tokens"] = tokens;
+  }
+
+  if (icons.length > 0) {
+    merged["_icons"] = icons as any;
   }
 
   return merged;

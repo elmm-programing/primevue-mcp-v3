@@ -5,7 +5,7 @@ import { load } from "cheerio";
 
 const API_PATH = path.resolve("data/api.json");
 const OUTPUT_PATH = path.resolve("data/docs.json");
-const BASE_URL = "https://www.primevue.org";
+const BASE_URL = "https://v3.primevue.org";
 
 async function fetchDocs(component: string) {
   const url = `${BASE_URL}/${component}/`;

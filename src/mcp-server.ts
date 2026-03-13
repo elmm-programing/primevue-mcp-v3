@@ -8,8 +8,13 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const DATA_PATH = path.resolve("data/combined.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const isDist = __dirname.includes(path.join("dist", "src"));
+const DATA_PATH = path.resolve(__dirname, isDist ? "../../data/combined.json" : "../data/combined.json");
 
 // Cache dataset
 let dataset: Record<string, any> = {};
@@ -19,7 +24,7 @@ function getDataset() {
     try {
       const file = fs.readFileSync(DATA_PATH, "utf8");
       dataset = JSON.parse(file);
-      console.log(`✅ Loaded ${Object.keys(dataset).length} components`);
+      console.error(`✅ Loaded ${Object.keys(dataset).length} components`);
     } catch (err) {
       console.error("❌ Failed to load dataset:", err);
       throw err;
@@ -61,6 +66,12 @@ server.setRequestHandler(ListResourcesRequestSchema, async () => {
         description: "Global design tokens for PrimeVue components",
         mimeType: "application/json",
       },
+      {
+        uri: "primevue://icons",
+        name: "PrimeIcons",
+        description: "List of all available PrimeIcons",
+        mimeType: "application/json",
+      },
     ],
   };
 });
@@ -77,6 +88,18 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request: any) => {
           uri,
           mimeType: "application/json",
           text: JSON.stringify(data["_tokens"] || {}, null, 2),
+        },
+      ],
+    };
+  }
+
+  if (uri === "primevue://icons") {
+    return {
+      contents: [
+        {
+          uri,
+          mimeType: "application/json",
+          text: JSON.stringify(data["_icons"] || [], null, 2),
         },
       ],
     };
@@ -132,6 +155,16 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           type: "object",
           properties: {
             query: { type: "string", description: "Search term" },
+          },
+        },
+      },
+      {
+        name: "search_icons",
+        description: "Search available PrimeIcons by name",
+        inputSchema: {
+          type: "object",
+          properties: {
+            query: { type: "string", description: "Search term (e.g. 'arrow', 'user')" },
           },
         },
       },
@@ -221,8 +254,9 @@ function searchTokens(data: Record<string, any>, query: string) {
 }
 
 function listComponents(data: Record<string, any>) {
-  const components = Object.keys(data).filter((k) => k !== "_tokens");
+  const components = Object.keys(data).filter((k) => k !== "_tokens" && k !== "_icons");
   const tokenCount = data["_tokens"] ? Object.keys(data["_tokens"]).length : 0;
+  const iconCount = data["_icons"] ? data["_icons"].length : 0;
 
   return {
     name: "PrimeVue MCP",
@@ -230,7 +264,8 @@ function listComponents(data: Record<string, any>) {
     stats: {
       components: components.length,
       tokens: tokenCount,
-      total: components.length + tokenCount,
+      icons: iconCount,
+      total: components.length + tokenCount + iconCount,
     },
     components: components.map(name => ({
       name,
@@ -238,6 +273,15 @@ function listComponents(data: Record<string, any>) {
       description: data[name]?.description,
     })),
   };
+}
+
+function searchIcons(data: Record<string, any>, query: string) {
+  const icons = Array.isArray(data["_icons"]) ? data["_icons"] : [];
+  const lowerQuery = query.toLowerCase();
+
+  const filtered = icons.filter((icon: string) => icon.toLowerCase().includes(lowerQuery));
+
+  return { query, count: filtered.length, icons: filtered };
 }
 
 // Handle tool calls
@@ -265,6 +309,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request: ToolRequest) => 
       return createTextResponse(result);
     }
 
+    case "search_icons": {
+      const query = args?.query || "";
+      const result = searchIcons(data, query);
+      return createTextResponse(result);
+    }
+
     case "list_components": {
       const result = listComponents(data);
       return createTextResponse(result);
@@ -279,7 +329,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request: ToolRequest) => 
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.log("🚀 PrimeVue MCP server running");
+  console.error("🚀 PrimeVue MCP server running");
 }
 
 main().catch(console.error);

@@ -1,9 +1,17 @@
 {
-  "name": "primevue-mcp",
+  "name": "primevue-mcp-v3",
   "version": "1.0.0",
   "description": "Unofficial MCP for PrimeVue",
-  "main": "src/mcp-server.ts",
+  "main": "dist/src/mcp-server.js",
   "type": "module",
+  "bin": {
+    "primevue-mcp": "./bin/primevue-mcp.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "data/combined.json"
+  ],
   "scripts": {
     "dev": "tsx src/mcp-server.ts",
     "start": "tsx src/server.ts",
@@ -11,9 +19,10 @@
     "extract:api": "tsx scripts/extract_api.ts",
     "extract:logic": "tsx scripts/extract_logic.ts",
     "extract:tokens": "tsx scripts/extract_tokens.ts",
+    "extract:icons": "tsx scripts/extract_icons.ts",
     "extract:docs": "tsx scripts/extract_docs.ts",
     "extract:build": "tsx scripts/merge_datasets.ts",
-    "extract:all": "npm run extract:api && npm run extract:logic && npm run extract:tokens && npm run extract:docs && npm run extract:build",
+    "extract:all": "npm run extract:api && npm run extract:logic && npm run extract:icons && npm run extract:tokens && npm run extract:docs && npm run extract:build",
     "build": "tsc"
   },
   "keywords": [
@@ -36,7 +45,7 @@
     "globby": "^15.0.0",
     "node-fetch": "^3.3.2",
     "primeicons": "^7.0.0",
-    "primevue": "^4.4.1",
+    "primevue": "^3.53.0",
     "vue": "^3.5.22",
     "zod": "^3.25.76"
   },

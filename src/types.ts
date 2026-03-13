@@ -7,20 +7,20 @@ import {
   SearchQuery
 } from "./validation.js";
 
-// Extended Request interfaces for specific endpoints
-export interface ComponentListRequest extends Request {
+// Extended Request types for specific endpoints
+export type ComponentListRequest = Request & {
   validatedQuery: ComponentQuery;
-}
+};
 
-export interface ComponentDetailRequest extends Request {
+export type ComponentDetailRequest = Request & {
   validatedParams: ComponentParams;
   validatedQuery: ComponentSectionQuery;
-}
+};
 
-export interface TokensRequest extends Request {
+export type TokensRequest = Request & {
   validatedQuery: TokensQuery;
-}
+};
 
-export interface SearchRequest extends Request {
+export type SearchRequest = Request & {
   validatedQuery: SearchQuery;
-}
+};

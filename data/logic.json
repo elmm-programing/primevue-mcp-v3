@@ -6,109 +6,31 @@
     ],
     "methods": [
       "data",
-      "value",
-      "handler",
-      "isItemActive",
-      "updateValue",
+      "function",
+      "activeIndex",
+      "mounted",
       "isAccordionTab",
+      "isTabActive",
       "getTabProp",
       "getKey",
-      "getHeaderPT",
-      "getContentPT",
+      "getTabHeaderActionId",
+      "getTabContentId",
       "getTabPT",
       "onTabClick",
+      "onTabKeyDown",
+      "onTabArrowDownKey",
+      "onTabArrowUpKey",
+      "onTabHomeKey",
+      "onTabEndKey",
+      "onTabEnterKey",
+      "findNextHeaderAction",
+      "findPrevHeaderAction",
+      "findFirstHeaderAction",
+      "findLastHeaderAction",
+      "changeActiveIndex",
+      "changeFocusedTab",
       "tabs",
-      "if",
-      "hasAccordionTab"
-    ]
-  },
-  "accordioncontent": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "id",
-      "ariaLabelledby",
-      "attrs",
-      "a11yAttrs",
-      "ptParams"
-    ]
-  },
-  "accordionheader": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "onFocus",
-      "onClick",
-      "onKeydown",
-      "onArrowDownKey",
-      "onArrowUpKey",
-      "onHomeKey",
-      "onEndKey",
-      "onEnterKey",
-      "findPanel",
-      "findHeader",
-      "findNextPanel",
-      "findPrevPanel",
-      "findFirstPanel",
-      "findLastPanel",
-      "changeActiveValue",
-      "changeFocusedPanel",
-      "id",
-      "ariaControls",
-      "attrs",
-      "asAttrs",
-      "a11yAttrs",
-      "ptParams",
-      "dataP"
-    ]
-  },
-  "accordionpanel": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "active",
-      "attrs",
-      "a11yAttrs",
-      "ptParams"
-    ]
-  },
-  "accordiontab": {
-    "methods": [
-      "mounted"
-    ]
-  },
-  "animateonscroll": {
-    "methods": [
-      "_typeof",
-      "function",
-      "ownKeys",
-      "_objectSpread",
-      "forEach",
-      "_defineProperty",
-      "_toPropertyKey",
-      "_toPrimitive",
-      "_slicedToArray",
-      "_nonIterableRest",
-      "_unsupportedIterableToArray",
-      "_arrayLikeToArray",
-      "_iterableToArrayLimit",
-      "catch",
-      "_arrayWithHoles",
-      "extend",
-      "mounted",
-      "unmounted",
-      "bindAnimationEvents",
-      "bindIntersectionObserver",
-      "IntersectionObserver",
-      "if",
-      "setTimeout",
-      "enter",
-      "leave",
-      "unbindAnimationEvents",
-      "unbindIntersectionObserver"
+      "if"
     ]
   },
   "autocomplete": {
@@ -122,6 +44,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "suggestions",
       "mounted",
       "updated",
@@ -152,8 +75,6 @@
       "onDropdownClick",
       "onOptionSelect",
       "onOptionMouseMove",
-      "onOptionSelectRange",
-      "onClearClick",
       "onOverlayClick",
       "onOverlayKeyDown",
       "onArrowDownKey",
@@ -165,10 +86,8 @@
       "onPageUpKey",
       "onPageDownKey",
       "onEnterKey",
-      "onSpaceKey",
       "onEscapeKey",
       "onTabKey",
-      "onShiftKey",
       "onBackspaceKey",
       "onArrowLeftKeyOnMultiple",
       "onArrowRightKeyOnMultiple",
@@ -209,9 +128,6 @@
       "overlayRef",
       "listRef",
       "virtualScrollerRef",
-      "findNextSelectedOptionIndex",
-      "findPrevSelectedOptionIndex",
-      "findNearestSelectedOptionIndex",
       "visibleOptions",
       "inputValue",
       "hasSelectedOption",
@@ -225,13 +141,8 @@
       "listAriaLabel",
       "focusedOptionId",
       "focusedMultipleOptionId",
-      "isClearIconVisible",
       "ariaSetSize",
-      "virtualScrollerDisabled",
-      "panelId",
-      "containerDataP",
-      "overlayDataP",
-      "inputMultipleDataP"
+      "virtualScrollerDisabled"
     ],
     "emits": [
       "before-show",
@@ -243,36 +154,66 @@
     ]
   },
   "avatar": {
+    "methods": [
+      "onError"
+    ]
+  },
+  "basecomponent": {
+    "composables": [
+      "usePT",
+      "useDefaultPT",
+      "useGlobalPT",
+      "useMergeProps"
+    ],
     "vueImports": [
+      "watch",
+      "onMounted",
+      "onUnmounted",
       "computed"
     ],
     "methods": [
-      "onError",
-      "dataP"
+      "handler",
+      "beforeCreate",
+      "created",
+      "beforeMount",
+      "mounted",
+      "beforeUpdate",
+      "updated",
+      "beforeUnmount",
+      "unmounted",
+      "_hook",
+      "_mergeProps",
+      "_loadGlobalStyles",
+      "_getHostInstance",
+      "_getPropValue",
+      "_getOptionValue",
+      "_getPTValue",
+      "_getPTSelf",
+      "_getPTDatasets",
+      "_getPTClassValue",
+      "_getPT",
+      "_usePT",
+      "_useGlobalPT",
+      "_useDefaultPT",
+      "ptm",
+      "ptmi",
+      "ptmo",
+      "cx",
+      "sx",
+      "globalPT",
+      "defaultPT",
+      "isUnstyled",
+      "params",
+      "style",
+      "primevueConfig",
+      "name",
+      "_attrsPT",
+      "_attrsNoPT"
     ]
   },
-  "badge": {
-    "vueImports": [
-      "computed"
-    ],
+  "baseicon": {
     "methods": [
-      "dataP"
-    ]
-  },
-  "badgedirective": {
-    "methods": [
-      "_typeof",
-      "function",
-      "ownKeys",
-      "_objectSpread",
-      "forEach",
-      "_defineProperty",
-      "_toPropertyKey",
-      "_toPrimitive",
-      "extend",
-      "for",
-      "if",
-      "updated"
+      "pti"
     ]
   },
   "blockui": {
@@ -302,19 +243,177 @@
       "getPTOptions",
       "disabled",
       "defaultAriaLabel",
-      "hasIcon",
-      "attrs",
-      "asAttrs",
-      "a11yAttrs",
-      "hasFluid",
-      "dataP",
-      "dataIconP",
-      "dataLabelP"
+      "hasIcon"
     ]
   },
   "calendar": {
+    "composables": [
+      "useUp",
+      "useDown",
+      "useLeave"
+    ],
+    "vueImports": [
+      "ref",
+      "watch",
+      "computed"
+    ],
     "methods": [
-      "mounted"
+      "data",
+      "function",
+      "handler",
+      "showTime",
+      "minDate",
+      "maxDate",
+      "months",
+      "numberOfMonths",
+      "responsiveOptions",
+      "currentView",
+      "view",
+      "created",
+      "mounted",
+      "updated",
+      "if",
+      "beforeUnmount",
+      "isComparable",
+      "isSelected",
+      "for",
+      "isMonthSelected",
+      "isYearSelected",
+      "isDateEquals",
+      "isDateBetween",
+      "getFirstDayOfMonthIndex",
+      "getDaysCountInMonth",
+      "getDaysCountInPrevMonth",
+      "getPreviousMonthAndYear",
+      "getNextMonthAndYear",
+      "daylightSavingAdjust",
+      "isToday",
+      "isSelectable",
+      "onOverlayEnter",
+      "onOverlayEnterComplete",
+      "onOverlayAfterLeave",
+      "onOverlayLeave",
+      "onPrevButtonClick",
+      "onNextButtonClick",
+      "navBackward",
+      "navForward",
+      "decrementYear",
+      "decrementDecade",
+      "incrementYear",
+      "incrementDecade",
+      "switchToMonthView",
+      "switchToYearView",
+      "isEnabled",
+      "updateCurrentTimeMeta",
+      "bindOutsideClickListener",
+      "unbindOutsideClickListener",
+      "bindScrollListener",
+      "unbindScrollListener",
+      "bindResizeListener",
+      "unbindResizeListener",
+      "bindMatchMediaListener",
+      "unbindMatchMediaListener",
+      "isOutsideClicked",
+      "isNavIconClicked",
+      "alignOverlay",
+      "onButtonClick",
+      "isDateDisabled",
+      "isDayDisabled",
+      "onMonthDropdownChange",
+      "onYearDropdownChange",
+      "onDateSelect",
+      "selectDate",
+      "updateModel",
+      "shouldSelectDate",
+      "isSingleSelection",
+      "isRangeSelection",
+      "isMultipleSelection",
+      "formatValue",
+      "catch",
+      "formatDateTime",
+      "formatDate",
+      "while",
+      "formatTime",
+      "onTodayButtonClick",
+      "onClearButtonClick",
+      "onTimePickerElementMouseDown",
+      "onTimePickerElementMouseUp",
+      "onTimePickerElementMouseLeave",
+      "repeat",
+      "switch",
+      "convertTo24Hour",
+      "validateTime",
+      "incrementHour",
+      "decrementHour",
+      "incrementMinute",
+      "decrementMinute",
+      "incrementSecond",
+      "decrementSecond",
+      "updateModelTime",
+      "toggleAMPM",
+      "clearTimePickerTimer",
+      "onMonthSelect",
+      "onYearSelect",
+      "enableModality",
+      "disableModality",
+      "destroyMask",
+      "updateCurrentMetaData",
+      "isValidSelection",
+      "parseValue",
+      "parseDateTime",
+      "populateTime",
+      "parseTime",
+      "parseDate",
+      "getWeekNumber",
+      "onDateCellKeydown",
+      "navigateToMonth",
+      "onMonthCellKeydown",
+      "onYearCellKeydown",
+      "updateFocus",
+      "initFocusableCell",
+      "trapFocus",
+      "onContainerButtonKeydown",
+      "onInput",
+      "onInputClick",
+      "onFocus",
+      "onBlur",
+      "onKeyDown",
+      "overlayRef",
+      "inputRef",
+      "previousButtonRef",
+      "nextButtonRef",
+      "getMonthName",
+      "getYear",
+      "onOverlayClick",
+      "onOverlayKeyDown",
+      "onOverlayMouseUp",
+      "createResponsiveStyle",
+      "child",
+      "and",
+      "destroyResponsiveStyleElement",
+      "viewDate",
+      "inputFieldValue",
+      "weekDays",
+      "ticksTo1970",
+      "sundayIndex",
+      "datePattern",
+      "yearOptions",
+      "monthPickerValues",
+      "yearPickerValues",
+      "formattedCurrentHour",
+      "formattedCurrentMinute",
+      "formattedCurrentSecond",
+      "todayLabel",
+      "clearLabel",
+      "weekHeaderLabel",
+      "monthNames",
+      "attributeSelector",
+      "switchViewButtonDisabled",
+      "panelId"
+    ],
+    "emits": [
+      "show",
+      "hide"
     ]
   },
   "carousel": {
@@ -335,7 +434,6 @@
       "updated",
       "beforeUnmount",
       "getIndicatorPTOptions",
-      "getItemPTOptions",
       "step",
       "calculatePosition",
       "for",
@@ -361,7 +459,6 @@
       "stopAutoplay",
       "createStyle",
       "isVertical",
-      "hasValidItemCount",
       "isCircular",
       "isAutoplay",
       "firstIndex",
@@ -374,15 +471,12 @@
       "ariaSlideLabel",
       "ariaPrevButtonLabel",
       "ariaNextButtonLabel",
+      "attributeSelector",
       "empty",
       "emptyMessageText"
     ]
   },
   "cascadeselect": {
-    "composables": [
-      "useMove",
-      "useEnter"
-    ],
     "vueImports": [
       "ref",
       "watch",
@@ -390,6 +484,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "options",
       "mounted",
       "beforeUnmount",
@@ -409,13 +504,10 @@
       "onKeyDown",
       "switch",
       "onOptionChange",
-      "onOptionClick",
-      "onOptionMouseEnter",
-      "onOptionMouseMove",
+      "onOptionFocusChange",
       "onOptionSelect",
       "onOptionGroupSelect",
       "onContainerClick",
-      "onClearClick",
       "onOverlayClick",
       "onOverlayKeyDown",
       "onArrowDownKey",
@@ -439,8 +531,6 @@
       "unbindScrollListener",
       "bindResizeListener",
       "unbindResizeListener",
-      "bindMatchMediaListener",
-      "unbindMatchMediaListener",
       "isOptionMatched",
       "isValidOption",
       "isValidSelectedOption",
@@ -472,8 +562,7 @@
       "selectionMessageText",
       "emptySelectionMessageText",
       "selectedMessageText",
-      "focusedOptionId",
-      "isClearIconVisible"
+      "focusedOptionId"
     ],
     "emits": [
       "before-show",
@@ -506,50 +595,51 @@
   },
   "checkbox": {
     "vueImports": [
+      "computed"
+    ],
+    "methods": [
+      "getPTOptions",
+      "onChange",
+      "onFocus",
+      "onBlur",
+      "checked"
+    ]
+  },
+  "chip": {
+    "methods": [
+      "data",
+      "onKeydown",
+      "close"
+    ]
+  },
+  "chips": {
+    "vueImports": [
       "ref",
       "watch",
       "computed"
     ],
     "methods": [
       "data",
-      "indeterminate",
+      "function",
       "mounted",
-      "updated",
-      "getPTOptions",
-      "onChange",
-      "if",
+      "onWrapperClick",
+      "onInput",
       "onFocus",
       "onBlur",
-      "updateIndeterminate",
-      "groupName",
-      "checked",
-      "dataP"
-    ]
-  },
-  "checkboxgroup": {
-    "vueImports": [
-      "watch"
-    ],
-    "methods": [
-      "data",
-      "name",
-      "mounted"
-    ]
-  },
-  "chip": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "onKeydown",
-      "close",
-      "dataP"
-    ]
-  },
-  "chips": {
-    "methods": [
-      "mounted"
+      "onKeyDown",
+      "if",
+      "onPaste",
+      "onContainerFocus",
+      "onContainerBlur",
+      "onContainerKeyDown",
+      "onArrowLeftKeyOn",
+      "onArrowRightKeyOn",
+      "onBackspaceKeyOn",
+      "updateModel",
+      "addItem",
+      "removeItem",
+      "maxedOut",
+      "focusedOptionId"
     ]
   },
   "colorpicker": {
@@ -576,8 +666,6 @@
       "updateInput",
       "updateUI",
       "validateHSB",
-      "validateRGB",
-      "validateHEX",
       "HEXtoRGB",
       "HEXtoHSB",
       "RGBtoHSB",
@@ -591,7 +679,6 @@
       "alignOverlay",
       "onInputClick",
       "onInputKeydown",
-      "onInputBlur",
       "onColorMousedown",
       "onColorDragStart",
       "onDrag",
@@ -636,15 +723,6 @@
       "unmounted"
     ]
   },
-  "confirmationservice": {
-    "methods": [
-      "install",
-      "close"
-    ],
-    "emits": [
-      "close"
-    ]
-  },
   "confirmdialog": {
     "vueImports": [
       "computed"
@@ -657,9 +735,7 @@
       "accept",
       "reject",
       "onHide",
-      "appendTo",
-      "target",
-      "modal",
+      "getCXOptions",
       "header",
       "message",
       "blockScroll",
@@ -704,6 +780,7 @@
       "containerRef",
       "onOverlayClick",
       "onOverlayKeydown",
+      "getCXOptions",
       "message",
       "acceptLabel",
       "rejectLabel",
@@ -723,6 +800,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "activeItemPath",
       "if",
       "mounted",
@@ -766,8 +844,6 @@
       "unbindResizeListener",
       "bindDocumentContextMenuListener",
       "unbindDocumentContextMenuListener",
-      "bindMatchMediaListener",
-      "unbindMatchMediaListener",
       "isItemMatched",
       "isValidItem",
       "isValidSelectedItem",
@@ -860,7 +936,6 @@
       "updateEditingRowKeys",
       "equals",
       "selectRange",
-      "generateCSV",
       "exportCSV",
       "resetPage",
       "onColumnResizeStart",
@@ -891,7 +966,6 @@
       "getStorage",
       "saveState",
       "restoreState",
-      "catch",
       "saveColumnWidths",
       "addColumnWidthStyles",
       "restoreColumnWidths",
@@ -910,6 +984,10 @@
       "cloneFilters",
       "updateReorderableColumns",
       "createStyleElement",
+      "createResponsiveStyle",
+      "and",
+      "not",
+      "destroyResponsiveStyle",
       "destroyStyleElement",
       "dataToRender",
       "getVirtualScrollerRef",
@@ -926,11 +1004,9 @@
       "paginatorBottom",
       "sorted",
       "allRowsSelected",
+      "attributeSelector",
       "groupRowSortField",
-      "headerFilterButtonProps",
-      "rowEditButtonProps",
-      "virtualScrollerDisabled",
-      "dataP"
+      "virtualScrollerDisabled"
     ]
   },
   "dataview": {
@@ -957,185 +1033,16 @@
       "if"
     ]
   },
-  "datepicker": {
-    "composables": [
-      "useUp",
-      "useDown",
-      "useLeave"
-    ],
+  "dataviewlayoutoptions": {
     "vueImports": [
-      "ref",
-      "watch",
       "computed"
     ],
     "methods": [
       "data",
-      "handler",
+      "changeLayout",
       "if",
-      "showTime",
-      "minDate",
-      "maxDate",
-      "months",
-      "numberOfMonths",
-      "responsiveOptions",
-      "currentView",
-      "view",
-      "created",
-      "mounted",
-      "updated",
-      "beforeUnmount",
-      "isSelected",
-      "for",
-      "isMonthSelected",
-      "isYearSelected",
-      "isDateEquals",
-      "isDateBetween",
-      "getFirstDayOfMonthIndex",
-      "getDaysCountInMonth",
-      "getDaysCountInPrevMonth",
-      "getPreviousMonthAndYear",
-      "getNextMonthAndYear",
-      "daylightSavingAdjust",
-      "isToday",
-      "isSelectable",
-      "onOverlayEnter",
-      "onOverlayEnterComplete",
-      "onOverlayAfterLeave",
-      "onOverlayLeave",
-      "onPrevButtonClick",
-      "onNextButtonClick",
-      "navBackward",
-      "navForward",
-      "decrementYear",
-      "decrementDecade",
-      "incrementYear",
-      "incrementDecade",
-      "switchToMonthView",
-      "switchToYearView",
-      "isEnabled",
-      "updateCurrentTimeMeta",
-      "bindOutsideClickListener",
-      "unbindOutsideClickListener",
-      "bindScrollListener",
-      "unbindScrollListener",
-      "bindResizeListener",
-      "unbindResizeListener",
-      "bindMatchMediaListener",
-      "unbindMatchMediaListener",
-      "bindMatchMediaOrientationListener",
-      "unbindMatchMediaOrientationListener",
-      "isOutsideClicked",
-      "isNavIconClicked",
-      "alignOverlay",
-      "onButtonClick",
-      "isDateDisabled",
-      "isDayDisabled",
-      "onMonthDropdownChange",
-      "onYearDropdownChange",
-      "onDateSelect",
-      "selectDate",
-      "updateModel",
-      "shouldSelectDate",
-      "isSingleSelection",
-      "isRangeSelection",
-      "isMultipleSelection",
-      "formatValue",
-      "catch",
-      "formatDateTime",
-      "formatDate",
-      "while",
-      "formatTime",
-      "onTodayButtonClick",
-      "onClearButtonClick",
-      "onTimePickerElementMouseDown",
-      "onTimePickerElementMouseUp",
-      "onTimePickerElementMouseLeave",
-      "onTimePickerElementKeyDown",
-      "onTimePickerElementKeyUp",
-      "repeat",
-      "switch",
-      "convertTo24Hour",
-      "validateTime",
-      "incrementHour",
-      "decrementHour",
-      "incrementMinute",
-      "decrementMinute",
-      "incrementSecond",
-      "decrementSecond",
-      "updateModelTime",
-      "toggleAMPM",
-      "clearTimePickerTimer",
-      "onMonthSelect",
-      "onYearSelect",
-      "updateCurrentMetaData",
-      "isValidSelection",
-      "parseValue",
-      "parseValueForComparison",
-      "parseDateTime",
-      "populateTime",
-      "parseTime",
-      "parseDate",
-      "getWeekNumber",
-      "onDateCellKeydown",
-      "navigateToMonth",
-      "onMonthCellKeydown",
-      "onYearCellKeydown",
-      "updateFocus",
-      "initFocusableCell",
-      "trapFocus",
-      "onContainerButtonKeydown",
-      "onInput",
-      "onInputClick",
-      "onFocus",
-      "onBlur",
-      "onKeyDown",
-      "overlayRef",
-      "inputRef",
-      "previousButtonRef",
-      "nextButtonRef",
-      "getMonthName",
-      "getYear",
-      "onClearClick",
-      "onOverlayClick",
-      "onOverlayKeyDown",
-      "onOverlayMouseUp",
-      "createResponsiveStyle",
-      "child",
-      "and",
-      "destroyResponsiveStyleElement",
-      "dayDataP",
-      "viewDate",
-      "inputFieldValue",
-      "weekDays",
-      "ticksTo1970",
-      "sundayIndex",
-      "datePattern",
-      "monthPickerValues",
-      "yearPickerValues",
-      "formattedCurrentHour",
-      "formattedCurrentMinute",
-      "formattedCurrentSecond",
-      "todayLabel",
-      "clearLabel",
-      "weekHeaderLabel",
-      "monthNames",
-      "switchViewButtonDisabled",
-      "isClearIconVisible",
-      "panelId",
-      "containerDataP",
-      "panelDataP",
-      "inputIconDataP",
-      "timePickerDataP",
-      "hourIncrementCallbacks",
-      "hourDecrementCallbacks",
-      "minuteIncrementCallbacks",
-      "minuteDecrementCallbacks",
-      "secondIncrementCallbacks",
-      "secondDecrementCallbacks"
-    ],
-    "emits": [
-      "show",
-      "hide"
+      "listViewAriaLabel",
+      "gridViewAriaLabel"
     ]
   },
   "deferredcontent": {
@@ -1153,31 +1060,28 @@
     ]
   },
   "dialog": {
-    "composables": [
-      "useDown",
-      "useUp",
-      "useDownTarget"
-    ],
     "vueImports": [
       "ref",
-      "computed"
+      "computed",
+      "watch"
     ],
     "methods": [
       "provide",
       "data",
+      "function",
       "updated",
       "beforeUnmount",
       "mounted",
       "close",
+      "onBeforeEnter",
       "onEnter",
       "onAfterEnter",
       "onBeforeLeave",
-      "if",
       "onLeave",
       "onAfterLeave",
-      "onMaskMouseDown",
-      "onMaskMouseUp",
+      "onMaskClick",
       "focus",
+      "if",
       "maximize",
       "enableDocumentSettings",
       "unbindDocumentState",
@@ -1203,26 +1107,12 @@
       "maximizeIconComponent",
       "ariaLabelledById",
       "closeAriaLabel",
-      "dataP"
+      "attributeSelector"
     ],
     "emits": [
       "show",
       "hide",
       "after-hide"
-    ]
-  },
-  "dialogservice": {
-    "methods": [
-      "install",
-      "close"
-    ]
-  },
-  "divider": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "dataP"
     ]
   },
   "dock": {
@@ -1238,7 +1128,10 @@
       "containerClass"
     ]
   },
-  "drawer": {
+  "dropdown": {
+    "composables": [
+      "useMove"
+    ],
     "vueImports": [
       "ref",
       "watch",
@@ -1246,47 +1139,111 @@
     ],
     "methods": [
       "data",
-      "dismissable",
+      "function",
+      "modelValue",
+      "options",
+      "mounted",
       "updated",
       "beforeUnmount",
-      "hide",
-      "onEnter",
-      "onAfterEnter",
-      "onBeforeLeave",
-      "onLeave",
-      "onAfterLeave",
-      "onMaskClick",
-      "focus",
       "if",
-      "enableDocumentSettings",
-      "disableDocumentSettings",
-      "onKeydown",
-      "containerRef",
-      "maskRef",
-      "contentRef",
-      "headerContainerRef",
-      "footerContainerRef",
-      "closeButtonRef",
-      "bindDocumentKeyDownListener",
-      "unbindDocumentKeyDownListener",
+      "getOptionIndex",
+      "getOptionLabel",
+      "getOptionValue",
+      "getOptionRenderKey",
+      "getPTItemOptions",
+      "isOptionDisabled",
+      "isOptionGroup",
+      "getOptionGroupLabel",
+      "getOptionGroupChildren",
+      "getAriaPosInset",
+      "show",
+      "hide",
+      "onFocus",
+      "onBlur",
+      "onKeyDown",
+      "switch",
+      "onEditableInput",
+      "onContainerClick",
+      "onClearClick",
+      "onFirstHiddenFocus",
+      "onLastHiddenFocus",
+      "onOptionSelect",
+      "onOptionMouseMove",
+      "onFilterChange",
+      "onFilterKeyDown",
+      "onFilterBlur",
+      "onFilterUpdated",
+      "onOverlayClick",
+      "onOverlayKeyDown",
+      "onArrowDownKey",
+      "onArrowUpKey",
+      "onArrowLeftKey",
+      "onHomeKey",
+      "onEndKey",
+      "onPageUpKey",
+      "onPageDownKey",
+      "onEnterKey",
+      "onSpaceKey",
+      "onEscapeKey",
+      "onTabKey",
+      "onBackspaceKey",
+      "onOverlayEnter",
+      "onOverlayAfterEnter",
+      "onOverlayLeave",
+      "onOverlayAfterLeave",
+      "alignOverlay",
       "bindOutsideClickListener",
       "unbindOutsideClickListener",
-      "isOutsideClicked",
-      "fullScreen",
-      "closeAriaLabel",
-      "dataP"
+      "bindScrollListener",
+      "unbindScrollListener",
+      "bindResizeListener",
+      "unbindResizeListener",
+      "bindLabelClickListener",
+      "unbindLabelClickListener",
+      "hasFocusableElements",
+      "isOptionMatched",
+      "isValidOption",
+      "isValidSelectedOption",
+      "isSelected",
+      "findFirstOptionIndex",
+      "findLastOptionIndex",
+      "findNextOptionIndex",
+      "findPrevOptionIndex",
+      "findSelectedOptionIndex",
+      "findFirstFocusedOptionIndex",
+      "findLastFocusedOptionIndex",
+      "searchOptions",
+      "changeFocusedOptionIndex",
+      "scrollInView",
+      "autoUpdateModel",
+      "updateModel",
+      "flatOptions",
+      "overlayRef",
+      "listRef",
+      "virtualScrollerRef",
+      "visibleOptions",
+      "hasSelectedOption",
+      "label",
+      "editableInputValue",
+      "equalityKey",
+      "searchFields",
+      "filterResultMessageText",
+      "filterMessageText",
+      "emptyFilterMessageText",
+      "emptyMessageText",
+      "selectionMessageText",
+      "emptySelectionMessageText",
+      "selectedMessageText",
+      "listAriaLabel",
+      "focusedOptionId",
+      "ariaSetSize",
+      "virtualScrollerDisabled"
     ],
     "emits": [
-      "show",
-      "after-show",
+      "before-show",
       "before-hide",
-      "hide",
-      "after-hide"
-    ]
-  },
-  "dropdown": {
-    "methods": [
-      "mounted"
+      "show",
+      "hide"
     ]
   },
   "dynamicdialog": {
@@ -1307,8 +1264,8 @@
     ],
     "methods": [
       "function",
+      "data",
       "modelValue",
-      "d_value",
       "readonly",
       "mounted",
       "if",
@@ -1326,11 +1283,12 @@
     ],
     "methods": [
       "data",
+      "function",
       "collapsed",
+      "mounted",
       "toggle",
       "onKeyDown",
-      "buttonAriaLabel",
-      "dataP"
+      "buttonAriaLabel"
     ]
   },
   "fileupload": {
@@ -1340,13 +1298,11 @@
     ],
     "methods": [
       "data",
-      "upload",
-      "onBasicUploaderClick",
       "onFileSelect",
-      "if",
       "for",
+      "if",
       "choose",
-      "uploader",
+      "upload",
       "clear",
       "onFocus",
       "onBlur",
@@ -1362,6 +1318,7 @@
       "onDragOver",
       "onDragLeave",
       "onDrop",
+      "onBasicUploaderClick",
       "remove",
       "removeUploadedFile",
       "clearInputElement",
@@ -1373,7 +1330,7 @@
       "isAdvanced",
       "isBasic",
       "chooseButtonClass",
-      "basicFileChosenLabel",
+      "basicChooseButtonLabel",
       "hasFiles",
       "hasUploadedFiles",
       "chooseDisabled",
@@ -1389,32 +1346,6 @@
       "clear"
     ]
   },
-  "focustrap": {
-    "methods": [
-      "_typeof",
-      "function",
-      "ownKeys",
-      "_objectSpread",
-      "forEach",
-      "_defineProperty",
-      "_toPropertyKey",
-      "_toPrimitive",
-      "extend",
-      "if",
-      "updated",
-      "unmounted",
-      "getComputedSelector",
-      "bind",
-      "MutationObserver",
-      "unbind",
-      "autoFocus",
-      "autoElementFocus",
-      "onFirstHiddenElementFocus",
-      "onLastHiddenElementFocus",
-      "createHiddenFocusableElements",
-      "createFocusableElement"
-    ]
-  },
   "galleria": {
     "vueImports": [
       "ref"
@@ -1427,17 +1358,11 @@
       "onBeforeEnter",
       "onEnter",
       "onBeforeLeave",
-      "onLeave",
       "onAfterLeave",
       "onActiveItemChange",
       "maskHide",
       "containerRef",
       "maskRef",
-      "onKeyDown",
-      "bindDocumentKeyDownListener",
-      "unbindDocumentKeyDownListener",
-      "bindGlobalListeners",
-      "unbindGlobalListeners",
       "focus"
     ]
   },
@@ -1485,11 +1410,6 @@
       "hide"
     ]
   },
-  "imagecompare": {
-    "methods": [
-      "onSlide"
-    ]
-  },
   "inlinemessage": {
     "vueImports": [
       "computed"
@@ -1503,41 +1423,15 @@
   "inplace": {
     "vueImports": [
       "ref",
-      "watch"
+      "watch",
+      "computed"
     ],
     "methods": [
       "data",
       "active",
       "open",
-      "close"
-    ]
-  },
-  "inputchips": {
-    "vueImports": [
-      "ref",
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "mounted",
-      "onWrapperClick",
-      "onInput",
-      "onFocus",
-      "onBlur",
-      "onKeyDown",
-      "if",
-      "onPaste",
-      "onContainerFocus",
-      "onContainerBlur",
-      "onContainerKeyDown",
-      "onArrowLeftKeyOn",
-      "onArrowRightKeyOn",
-      "onBackspaceKeyOn",
-      "updateModel",
-      "addItem",
-      "removeItem",
-      "maxedOut",
-      "focusedOptionId"
+      "close",
+      "closeAriaLabel"
     ]
   },
   "inputicon": {
@@ -1554,9 +1448,7 @@
       "computed"
     ],
     "methods": [
-      "data",
       "mask",
-      "disabled",
       "mounted",
       "updated",
       "onInput",
@@ -1579,15 +1471,18 @@
       "checkVal",
       "handleInputChange",
       "getUnmaskedValue",
-      "unmaskValue",
-      "updateModelValue",
+      "updateModel",
       "updateValue",
       "initMask",
       "for",
       "isValueUpdated",
-      "inputClass",
-      "rootPTOptions",
+      "filled",
       "ptmParams"
+    ],
+    "emits": [
+      "update:modelValue",
+      "update:modelValue",
+      "update:modelValue"
     ]
   },
   "inputnumber": {
@@ -1604,7 +1499,7 @@
     ],
     "methods": [
       "data",
-      "handler",
+      "modelValue",
       "locale",
       "localeMatcher",
       "mode",
@@ -1616,7 +1511,6 @@
       "suffix",
       "prefix",
       "created",
-      "mounted",
       "getOptions",
       "constructParser",
       "updateConstructParser",
@@ -1631,7 +1525,6 @@
       "if",
       "parseValue",
       "repeat",
-      "addWithPrecision",
       "spin",
       "onUpButtonMouseDown",
       "onUpButtonMouseUp",
@@ -1648,7 +1541,6 @@
       "switch",
       "onInputKeyPress",
       "onPaste",
-      "onClearClick",
       "allowMinusSign",
       "isMinusSign",
       "isDecimalSign",
@@ -1676,11 +1568,11 @@
       "clearTimer",
       "maxBoundry",
       "minBoundry",
+      "filled",
       "upButtonListeners",
       "downButtonListeners",
       "formattedValue",
-      "getFormatter",
-      "dataP"
+      "getFormatter"
     ]
   },
   "inputotp": {
@@ -1693,7 +1585,9 @@
       "handler",
       "getTemplateAttrs",
       "getTemplateEvents",
+      "getPTOptions",
       "onInput",
+      "if",
       "updateModel",
       "moveToPrev",
       "moveToNext",
@@ -1701,7 +1595,6 @@
       "findPrevInput",
       "onFocus",
       "onBlur",
-      "onClick",
       "onKeyDown",
       "switch",
       "onPaste",
@@ -1710,8 +1603,15 @@
     ]
   },
   "inputswitch": {
+    "vueImports": [
+      "computed"
+    ],
     "methods": [
-      "mounted"
+      "getPTOptions",
+      "onChange",
+      "onFocus",
+      "onBlur",
+      "checked"
     ]
   },
   "inputtext": {
@@ -1719,27 +1619,9 @@
       "computed"
     ],
     "methods": [
+      "getPTOptions",
       "onInput",
-      "attrs",
-      "dataP"
-    ]
-  },
-  "keyfilter": {
-    "methods": [
-      "extend",
-      "updated",
-      "unmounted",
-      "getTarget",
-      "getModifiers",
-      "getRegex",
-      "bindEvents",
-      "function",
-      "unbindEvents",
-      "onInput",
-      "onKeydown",
-      "if",
-      "onPaste",
-      "for"
+      "filled"
     ]
   },
   "knob": {
@@ -1753,12 +1635,11 @@
     ],
     "methods": [
       "data",
-      "updateValueByOffset",
+      "updateValue",
       "updateModel",
       "updateModelValue",
       "mapRange",
       "onClick",
-      "onBlur",
       "onMouseDown",
       "onMouseUp",
       "onTouchStart",
@@ -1795,6 +1676,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "options",
       "mounted",
       "getOptionIndex",
@@ -1817,12 +1699,12 @@
       "onOptionMouseDown",
       "onOptionMouseMove",
       "onOptionTouchEnd",
-      "onOptionDblClick",
       "onOptionSelectSingle",
       "if",
       "onOptionSelectMultiple",
       "onOptionSelectRange",
       "onFilterChange",
+      "onFilterBlur",
       "onFilterKeyDown",
       "onArrowDownKey",
       "onArrowUpKey",
@@ -1857,10 +1739,9 @@
       "scrollInView",
       "autoUpdateModel",
       "updateModel",
+      "flatOptions",
       "listRef",
       "virtualScrollerRef",
-      "optionsListFlat",
-      "optionsListGroup",
       "visibleOptions",
       "hasSelectedOption",
       "equalityKey",
@@ -1874,8 +1755,7 @@
       "selectedMessageText",
       "focusedOptionId",
       "ariaSetSize",
-      "virtualScrollerDisabled",
-      "containerDataP"
+      "virtualScrollerDisabled"
     ]
   },
   "megamenu": {
@@ -1889,6 +1769,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "activeItem",
       "mounted",
       "beforeUnmount",
@@ -1960,10 +1841,12 @@
     ],
     "vueImports": [
       "ref",
+      "watch",
       "computed"
     ],
     "methods": [
       "data",
+      "function",
       "mounted",
       "beforeUnmount",
       "if",
@@ -2000,8 +1883,7 @@
       "onOverlayClick",
       "containerRef",
       "listRef",
-      "focusedOptionId",
-      "dataP"
+      "focusedOptionId"
     ],
     "emits": [
       "show",
@@ -2020,6 +1902,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "activeItemPath",
       "mounted",
       "beforeUnmount",
@@ -2038,8 +1921,8 @@
       "onBlur",
       "onKeyDown",
       "onItemChange",
-      "if",
       "onItemClick",
+      "if",
       "onItemMouseEnter",
       "onItemMouseMove",
       "menuButtonClick",
@@ -2084,14 +1967,17 @@
   },
   "message": {
     "vueImports": [
+      "watch",
       "computed"
     ],
     "methods": [
       "data",
+      "sticky",
       "mounted",
       "close",
-      "closeAriaLabel",
-      "dataP"
+      "closeAfterDelay",
+      "iconComponent",
+      "closeAriaLabel"
     ],
     "emits": [
       "life-end"
@@ -2107,8 +1993,7 @@
       "percentValue",
       "meterCalculatedStyles",
       "totalPercent",
-      "percentages",
-      "dataP"
+      "percentages"
     ]
   },
   "multiselect": {
@@ -2122,6 +2007,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "options",
       "mounted",
       "beforeUnmount",
@@ -2144,9 +2030,9 @@
       "onKeyDown",
       "switch",
       "onContainerClick",
-      "onClearClick",
       "onFirstHiddenFocus",
       "onLastHiddenFocus",
+      "onCloseClick",
       "onOptionSelect",
       "onOptionMouseMove",
       "onOptionSelectRange",
@@ -2230,14 +2116,9 @@
       "focusedOptionId",
       "ariaSetSize",
       "toggleAllAriaLabel",
+      "closeAriaLabel",
       "listAriaLabel",
-      "virtualScrollerDisabled",
-      "hasFluid",
-      "isClearIconVisible",
-      "containerDataP",
-      "labelDataP",
-      "dropdownIconDataP",
-      "overlayDataP"
+      "virtualScrollerDisabled"
     ],
     "emits": [
       "before-show",
@@ -2247,28 +2128,60 @@
     ]
   },
   "orderlist": {
+    "composables": [
+      "useDown",
+      "useMove"
+    ],
     "vueImports": [
       "ref",
+      "watch",
       "computed"
     ],
     "methods": [
       "data",
+      "function",
       "beforeUnmount",
       "updated",
       "mounted",
-      "updateSelection",
-      "onChangeSelection",
+      "getItemKey",
+      "getPTOptions",
+      "isSelected",
       "onListFocus",
       "onListBlur",
-      "onReorderUpdate",
+      "onListKeyDown",
+      "onOptionMouseDown",
+      "onOptionMouseMove",
+      "onArrowDownKey",
+      "onArrowUpKey",
+      "onHomeKey",
+      "onEndKey",
+      "onEnterKey",
+      "onSpaceKey",
+      "findAllItems",
+      "findFocusedItem",
+      "findCurrentFocusedIndex",
+      "findFirstFocusedOptionIndex",
+      "findFirstSelectedOptionIndex",
+      "findLastSelectedOptionIndex",
+      "findMatchedOptionIndex",
+      "findNextOptionIndex",
+      "findPrevOptionIndex",
+      "changeFocusedOptionIndex",
+      "scrollInView",
+      "if",
       "moveUp",
       "moveTop",
       "moveDown",
       "moveBottom",
+      "onItemClick",
+      "onItemTouchEnd",
       "updateListScroll",
       "createStyle",
       "destroyStyle",
       "moveDisabled",
+      "listRef",
+      "attributeSelector",
+      "focusedOptionId",
       "moveUpAriaLabel",
       "moveTopAriaLabel",
       "moveDownAriaLabel",
@@ -2289,210 +2202,10 @@
     ]
   },
   "overlaypanel": {
-    "methods": [
-      "mounted"
-    ]
-  },
-  "paginator": {
     "vueImports": [
       "ref",
       "watch",
       "computed"
-    ],
-    "methods": [
-      "data",
-      "first",
-      "rows",
-      "totalRecords",
-      "mounted",
-      "changePage",
-      "changePageToFirst",
-      "changePageToPrev",
-      "changePageLink",
-      "changePageToNext",
-      "changePageToLast",
-      "onRowChange",
-      "createStyle",
-      "if",
-      "and",
-      "hasBreakpoints",
-      "getAriaLabel",
-      "templateItems",
-      "for",
-      "page",
-      "pageCount",
-      "isFirstPage",
-      "isLastPage",
-      "calculatePageLinkBoundaries",
-      "pageLinks",
-      "currentState",
-      "empty",
-      "currentPage",
-      "last"
-    ]
-  },
-  "panel": {
-    "vueImports": [
-      "watch",
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "collapsed",
-      "toggle",
-      "onKeyDown",
-      "buttonAriaLabel",
-      "dataP"
-    ]
-  },
-  "panelmenu": {
-    "methods": [
-      "data",
-      "getItemProp",
-      "getItemLabel",
-      "getPTOptions",
-      "isItemActive",
-      "isItemVisible",
-      "isItemDisabled",
-      "isItemFocused",
-      "isItemGroup",
-      "getPanelId",
-      "getPanelKey",
-      "getHeaderId",
-      "getContentId",
-      "onHeaderClick",
-      "if",
-      "onHeaderKeyDown",
-      "onHeaderArrowDownKey",
-      "onHeaderArrowUpKey",
-      "onHeaderHomeKey",
-      "onHeaderEndKey",
-      "onHeaderEnterKey",
-      "findNextHeader",
-      "findPrevHeader",
-      "findFirstHeader",
-      "findLastHeader",
-      "updateFocusedHeader",
-      "changeActiveItem",
-      "changeExpandedKeys",
-      "changeFocusedHeader",
-      "getMenuItemProps"
-    ]
-  },
-  "passthrough": {
-    "composables": [
-      "usePassThrough"
-    ],
-    "methods": [
-      "_typeof",
-      "function",
-      "ownKeys",
-      "_objectSpread",
-      "forEach",
-      "_defineProperty",
-      "_toPropertyKey",
-      "_toPrimitive",
-      "usePassThrough"
-    ]
-  },
-  "password": {
-    "vueImports": [
-      "ref",
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "mounted",
-      "beforeUnmount",
-      "if",
-      "onOverlayEnter",
-      "onOverlayLeave",
-      "onOverlayAfterLeave",
-      "alignOverlay",
-      "testStrength",
-      "onInput",
-      "onFocus",
-      "onBlur",
-      "onKeyUp",
-      "setPasswordMeter",
-      "checkPasswordStrength",
-      "onInvalid",
-      "bindScrollListener",
-      "unbindScrollListener",
-      "bindResizeListener",
-      "unbindResizeListener",
-      "overlayRef",
-      "onMaskToggle",
-      "onClearClick",
-      "onOverlayClick",
-      "inputType",
-      "weakText",
-      "mediumText",
-      "strongText",
-      "promptText",
-      "isClearIconVisible",
-      "overlayUniqueId",
-      "containerDataP",
-      "meterDataP",
-      "overlayDataP"
-    ]
-  },
-  "picklist": {
-    "vueImports": [
-      "ref",
-      "watch",
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "selection",
-      "breakpoint",
-      "updated",
-      "beforeUnmount",
-      "mounted",
-      "updateSelection",
-      "onChangeSelection",
-      "onListFocus",
-      "onListBlur",
-      "onReorderUpdate",
-      "onItemDblClick",
-      "moveUp",
-      "moveTop",
-      "moveDown",
-      "moveBottom",
-      "moveToTarget",
-      "moveAllToTarget",
-      "moveToSource",
-      "moveAllToSource",
-      "onItemClick",
-      "if",
-      "updateListScroll",
-      "initMedia",
-      "destroyMedia",
-      "bindMediaChangeListener",
-      "unbindMediaChangeListener",
-      "createStyle",
-      "destroyStyle",
-      "moveDisabled",
-      "moveAllDisabled",
-      "idSource",
-      "idTarget",
-      "sourceList",
-      "targetList",
-      "moveUpAriaLabel",
-      "moveTopAriaLabel",
-      "moveDownAriaLabel",
-      "moveBottomAriaLabel",
-      "moveToTargetAriaLabel",
-      "moveAllToTargetAriaLabel",
-      "moveToSourceAriaLabel",
-      "moveAllToSourceAriaLabel"
-    ]
-  },
-  "popover": {
-    "vueImports": [
-      "ref",
-      "watch"
     ],
     "methods": [
       "data",
@@ -2524,11 +2237,226 @@
       "containerRef",
       "createStyle",
       "destroyStyle",
-      "onOverlayClick"
+      "onOverlayClick",
+      "attributeSelector",
+      "closeAriaLabel"
     ],
     "emits": [
       "show",
       "hide"
+    ]
+  },
+  "paginator": {
+    "vueImports": [
+      "ref",
+      "watch",
+      "computed"
+    ],
+    "methods": [
+      "data",
+      "first",
+      "rows",
+      "totalRecords",
+      "mounted",
+      "changePage",
+      "changePageToFirst",
+      "changePageToPrev",
+      "changePageLink",
+      "changePageToNext",
+      "changePageToLast",
+      "onRowChange",
+      "createStyle",
+      "if",
+      "and",
+      "hasBreakpoints",
+      "setPaginatorAttribute",
+      "getAriaLabel",
+      "templateItems",
+      "for",
+      "page",
+      "pageCount",
+      "isFirstPage",
+      "isLastPage",
+      "calculatePageLinkBoundaries",
+      "pageLinks",
+      "currentState",
+      "empty",
+      "currentPage",
+      "attributeSelector"
+    ]
+  },
+  "panel": {
+    "vueImports": [
+      "watch",
+      "computed"
+    ],
+    "methods": [
+      "data",
+      "function",
+      "collapsed",
+      "mounted",
+      "toggle",
+      "onKeyDown",
+      "buttonAriaLabel"
+    ]
+  },
+  "panelmenu": {
+    "vueImports": [
+      "watch"
+    ],
+    "methods": [
+      "data",
+      "function",
+      "mounted",
+      "getItemProp",
+      "getItemLabel",
+      "getPTOptions",
+      "isItemActive",
+      "isItemVisible",
+      "isItemDisabled",
+      "isItemFocused",
+      "getPanelId",
+      "getPanelKey",
+      "getHeaderId",
+      "getContentId",
+      "onHeaderClick",
+      "if",
+      "onHeaderKeyDown",
+      "onHeaderArrowDownKey",
+      "onHeaderArrowUpKey",
+      "onHeaderHomeKey",
+      "onHeaderEndKey",
+      "onHeaderEnterKey",
+      "findNextHeader",
+      "findPrevHeader",
+      "findFirstHeader",
+      "findLastHeader",
+      "updateFocusedHeader",
+      "changeActiveItem",
+      "changeExpandedKeys",
+      "changeFocusedHeader",
+      "getMenuItemProps"
+    ]
+  },
+  "password": {
+    "vueImports": [
+      "ref",
+      "watch",
+      "computed"
+    ],
+    "methods": [
+      "data",
+      "function",
+      "mounted",
+      "beforeUnmount",
+      "if",
+      "onOverlayEnter",
+      "onOverlayLeave",
+      "onOverlayAfterLeave",
+      "alignOverlay",
+      "testStrength",
+      "onInput",
+      "onFocus",
+      "onBlur",
+      "onKeyUp",
+      "setPasswordMeter",
+      "checkPasswordStrength",
+      "onInvalid",
+      "bindScrollListener",
+      "unbindScrollListener",
+      "bindResizeListener",
+      "unbindResizeListener",
+      "overlayRef",
+      "onMaskToggle",
+      "onOverlayClick",
+      "inputType",
+      "filled",
+      "weakText",
+      "mediumText",
+      "strongText",
+      "promptText",
+      "panelUniqueId"
+    ]
+  },
+  "picklist": {
+    "composables": [
+      "useDown",
+      "useMove"
+    ],
+    "vueImports": [
+      "ref",
+      "watch",
+      "computed"
+    ],
+    "methods": [
+      "data",
+      "function",
+      "selection",
+      "breakpoint",
+      "updated",
+      "beforeUnmount",
+      "mounted",
+      "getItemKey",
+      "getPTOptions",
+      "isSelected",
+      "onListFocus",
+      "onListBlur",
+      "onOptionMouseDown",
+      "onOptionMouseMove",
+      "moveUp",
+      "moveTop",
+      "moveDown",
+      "moveBottom",
+      "moveToTarget",
+      "moveAllToTarget",
+      "moveToSource",
+      "moveAllToSource",
+      "onItemClick",
+      "if",
+      "onItemDblClick",
+      "onItemTouchEnd",
+      "onItemKeyDown",
+      "onArrowDownKey",
+      "onArrowUpKey",
+      "onEnterKey",
+      "onSpaceKey",
+      "onHomeKey",
+      "onEndKey",
+      "findAllItems",
+      "findFocusedItem",
+      "findCurrentFocusedIndex",
+      "findFirstFocusedOptionIndex",
+      "findFirstSelectedOptionIndex",
+      "findLastSelectedOptionIndex",
+      "findMatchedOptionIndex",
+      "findNextOptionIndex",
+      "findPrevOptionIndex",
+      "changeFocusedOptionIndex",
+      "scrollInView",
+      "updateListScroll",
+      "initMedia",
+      "destroyMedia",
+      "bindMediaChangeListener",
+      "unbindMediaChangeListener",
+      "createStyle",
+      "destroyStyle",
+      "moveDisabled",
+      "moveAllDisabled",
+      "hasSelectedOption",
+      "idSource",
+      "idTarget",
+      "focusedOptionId",
+      "sourceList",
+      "targetList",
+      "attributeSelector",
+      "moveUpAriaLabel",
+      "moveTopAriaLabel",
+      "moveDownAriaLabel",
+      "moveBottomAriaLabel",
+      "moveToTargetAriaLabel",
+      "moveAllToTargetAriaLabel",
+      "moveToSourceAriaLabel",
+      "moveAllToSourceAriaLabel"
     ]
   },
   "portal": {
@@ -2548,8 +2476,7 @@
     "methods": [
       "progressStyle",
       "indeterminate",
-      "determinate",
-      "dataP"
+      "determinate"
     ]
   },
   "progressspinner": {
@@ -2569,27 +2496,17 @@
       "onChange",
       "onFocus",
       "onBlur",
-      "groupName",
-      "checked",
-      "dataP"
+      "checked"
     ]
   },
-  "radiobuttongroup": {
+  "rating": {
     "vueImports": [
       "watch"
     ],
     "methods": [
       "data",
-      "name",
-      "mounted"
-    ]
-  },
-  "rating": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "data",
+      "function",
+      "mounted",
       "getPTOptions",
       "onOptionClick",
       "onFocus",
@@ -2597,41 +2514,8 @@
       "onChange",
       "onOptionSelect",
       "updateModel",
-      "starAriaLabel",
-      "dataOption",
-      "namex",
-      "dataP"
-    ]
-  },
-  "ripple": {
-    "composables": [
-      "useDown"
-    ],
-    "vueImports": [
-      "watch"
-    ],
-    "methods": [
-      "_typeof",
-      "function",
-      "_toConsumableArray",
-      "_nonIterableSpread",
-      "_unsupportedIterableToArray",
-      "_iterableToArray",
-      "_arrayWithoutHoles",
-      "_arrayLikeToArray",
-      "_defineProperty",
-      "_toPropertyKey",
-      "_toPrimitive",
-      "extend",
-      "unmounted",
-      "bindEvents",
-      "unbindEvents",
-      "createRipple",
-      "remove",
-      "onMouseDown",
-      "setTimeout",
-      "onAnimationEnd",
-      "getInk"
+      "cancelAriaLabel",
+      "starAriaLabel"
     ]
   },
   "row": {
@@ -2653,10 +2537,12 @@
     ],
     "vueImports": [
       "ref",
+      "watch",
       "computed"
     ],
     "methods": [
       "data",
+      "function",
       "mounted",
       "updated",
       "beforeUnmount",
@@ -2710,150 +2596,73 @@
       "scrollTopAriaLabel"
     ]
   },
-  "select": {
-    "composables": [
-      "useMove"
-    ],
+  "selectbutton": {
     "vueImports": [
       "ref",
-      "watch",
       "computed"
     ],
     "methods": [
       "data",
-      "modelValue",
-      "options",
       "mounted",
-      "updated",
-      "beforeUnmount",
-      "if",
-      "getOptionIndex",
+      "defaultTabIndexes",
       "getOptionLabel",
       "getOptionValue",
       "getOptionRenderKey",
-      "getPTItemOptions",
+      "getPTOptions",
       "isOptionDisabled",
-      "isOptionGroup",
-      "getOptionGroupLabel",
-      "getOptionGroupChildren",
-      "getAriaPosInset",
-      "show",
-      "hide",
+      "onOptionSelect",
+      "if",
+      "isSelected",
+      "onKeydown",
+      "onArrowRightKey",
+      "onArrowLeftKey",
+      "findAllElements",
+      "findNextElement",
+      "findPrevElement",
       "onFocus",
       "onBlur",
-      "onKeyDown",
-      "switch",
-      "onEditableInput",
-      "onContainerClick",
-      "onClearClick",
-      "onFirstHiddenFocus",
-      "onLastHiddenFocus",
-      "onOptionSelect",
-      "onOptionMouseMove",
-      "onFilterChange",
-      "onFilterKeyDown",
-      "onFilterBlur",
-      "onFilterUpdated",
-      "onOverlayClick",
-      "onOverlayKeyDown",
-      "onArrowDownKey",
-      "onArrowUpKey",
-      "onArrowLeftKey",
-      "onHomeKey",
-      "onEndKey",
-      "onPageUpKey",
-      "onPageDownKey",
-      "onEnterKey",
-      "onSpaceKey",
-      "onEscapeKey",
-      "onTabKey",
-      "onBackspaceKey",
-      "onOverlayEnter",
-      "onOverlayAfterEnter",
-      "onOverlayLeave",
-      "onOverlayAfterLeave",
-      "alignOverlay",
-      "bindOutsideClickListener",
-      "unbindOutsideClickListener",
-      "bindScrollListener",
-      "unbindScrollListener",
-      "bindResizeListener",
-      "unbindResizeListener",
-      "bindLabelClickListener",
-      "unbindLabelClickListener",
-      "bindMatchMediaOrientationListener",
-      "unbindMatchMediaOrientationListener",
-      "hasFocusableElements",
-      "isOptionExactMatched",
-      "isOptionStartsWith",
-      "isValidOption",
-      "isValidSelectedOption",
-      "isSelected",
-      "findFirstOptionIndex",
-      "findLastOptionIndex",
-      "findNextOptionIndex",
-      "findPrevOptionIndex",
-      "findSelectedOptionIndex",
-      "findFirstFocusedOptionIndex",
-      "findLastFocusedOptionIndex",
-      "searchOptions",
-      "changeFocusedOptionIndex",
-      "scrollInView",
-      "autoUpdateModel",
-      "updateModel",
-      "flatOptions",
-      "overlayRef",
-      "listRef",
-      "virtualScrollerRef",
-      "visibleOptions",
-      "hasSelectedOption",
-      "label",
-      "editableInputValue",
-      "equalityKey",
-      "searchFields",
-      "filterResultMessageText",
-      "filterMessageText",
-      "emptyFilterMessageText",
-      "emptyMessageText",
-      "selectionMessageText",
-      "emptySelectionMessageText",
-      "selectedMessageText",
-      "focusedOptionId",
-      "ariaSetSize",
-      "isClearIconVisible",
-      "virtualScrollerDisabled",
-      "containerDataP",
-      "labelDataP",
-      "dropdownIconDataP",
-      "overlayDataP"
-    ],
-    "emits": [
-      "before-show",
-      "before-hide",
-      "show",
-      "hide"
-    ]
-  },
-  "selectbutton": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "getOptionLabel",
-      "getOptionValue",
-      "getOptionRenderKey",
-      "isOptionDisabled",
-      "isOptionReadonly",
-      "onOptionSelect",
-      "if",
-      "isSelected",
-      "equalityKey",
-      "dataP"
+      "findTabindex",
+      "equalityKey"
     ]
   },
   "sidebar": {
+    "vueImports": [
+      "ref",
+      "computed"
+    ],
     "methods": [
-      "mounted"
+      "data",
+      "updated",
+      "beforeUnmount",
+      "hide",
+      "onEnter",
+      "onAfterEnter",
+      "onBeforeLeave",
+      "onLeave",
+      "onAfterLeave",
+      "onMaskClick",
+      "focus",
+      "if",
+      "enableDocumentSettings",
+      "disableDocumentSettings",
+      "onKeydown",
+      "containerRef",
+      "maskRef",
+      "contentRef",
+      "headerContainerRef",
+      "closeButtonRef",
+      "bindDocumentKeyDownListener",
+      "unbindDocumentKeyDownListener",
+      "bindOutsideClickListener",
+      "unbindOutsideClickListener",
+      "isOutsideClicked",
+      "fullScreen",
+      "closeAriaLabel"
+    ],
+    "emits": [
+      "show",
+      "hide",
+      "after-hide"
     ]
   },
   "skeleton": {
@@ -2861,8 +2670,7 @@
       "computed"
     ],
     "methods": [
-      "containerStyle",
-      "dataP"
+      "containerStyle"
     ]
   },
   "slider": {
@@ -2876,30 +2684,28 @@
       "beforeUnmount",
       "updateDomData",
       "setValue",
-      "if",
       "updateModel",
       "onDragStart",
+      "if",
       "onDrag",
       "onDragEnd",
       "onBarClick",
       "onMouseDown",
       "onKeyDown",
-      "onBlur",
       "decrementValue",
       "incrementValue",
       "bindDragListeners",
       "unbindDragListeners",
-      "rangeStyle",
-      "handleStyle",
-      "rangeStartHandleStyle",
-      "rangeEndHandleStyle",
       "value",
       "horizontal",
       "vertical",
+      "rangeStyle",
+      "handleStyle",
       "handlePosition",
       "rangeStartPosition",
       "rangeEndPosition",
-      "dataP"
+      "rangeStartHandleStyle",
+      "rangeEndHandleStyle"
     ]
   },
   "speeddial": {
@@ -2910,6 +2716,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "visible",
       "mounted",
       "if",
@@ -2964,12 +2771,12 @@
     ],
     "methods": [
       "data",
+      "function",
       "mounted",
       "onDropdownButtonClick",
       "onDropdownKeydown",
       "onDefaultButtonClick",
-      "containerClass",
-      "hasFluid"
+      "containerClass"
     ]
   },
   "splitter": {
@@ -2986,10 +2793,9 @@
     "methods": [
       "data",
       "mounted",
+      "if",
       "beforeUnmount",
       "isSplitterPanel",
-      "initializePanels",
-      "if",
       "onResizeStart",
       "onResize",
       "onResizeEnd",
@@ -3012,14 +2818,10 @@
       "getStorage",
       "saveState",
       "restoreState",
-      "resetState",
       "panels",
       "gutterStyle",
       "horizontal",
-      "getPTOptions",
-      "prevPanelMinSize",
-      "nextPanelMinSize",
-      "dataP"
+      "getPTOptions"
     ]
   },
   "splitterpanel": {
@@ -3033,61 +2835,31 @@
       "getPTOptions"
     ]
   },
-  "step": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "mounted",
-      "updated",
-      "getPTOptions",
-      "onStepClick",
-      "active",
-      "activeValue",
-      "isStepDisabled",
-      "id",
-      "ariaControls",
-      "a11yAttrs",
-      "dataP"
-    ]
-  },
-  "stepitem": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "isActive"
-    ]
-  },
-  "steppanel": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "mounted",
-      "getPTOptions",
-      "updateValue",
-      "active",
-      "isVertical",
-      "activeValue",
-      "id",
-      "ariaControls",
-      "a11yAttrs",
-      "dataP"
-    ]
-  },
   "stepper": {
     "vueImports": [
-      "watch"
+      "ref",
+      "watch",
+      "computed"
     ],
     "methods": [
       "data",
-      "value",
-      "updateValue",
+      "function",
+      "activeStep",
+      "mounted",
+      "isStep",
       "isStepActive",
-      "isStepDisabled"
+      "getStepProp",
+      "getStepKey",
+      "getStepHeaderActionId",
+      "getStepContentId",
+      "getStepPT",
+      "updateActiveStep",
+      "onItemClick",
+      "if",
+      "isItemDisabled",
+      "prevCallback",
+      "nextCallback",
+      "stepperpanels"
     ]
   },
   "steps": {
@@ -3120,89 +2892,6 @@
       "getMenuItemProps"
     ]
   },
-  "styleclass": {
-    "methods": [
-      "extend",
-      "unmounted",
-      "bind",
-      "unbind",
-      "enter",
-      "if",
-      "function",
-      "leave",
-      "bindDocumentListener",
-      "unbindDocumentListener",
-      "bindResizeListener",
-      "unbindResizeListener",
-      "bindWindowResizeListener",
-      "unbindWindowResizeListener",
-      "bindElementResizeListener",
-      "unbindElementResizeListener",
-      "isVisible",
-      "isOutsideClick"
-    ]
-  },
-  "tab": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "onFocus",
-      "onClick",
-      "onKeydown",
-      "onArrowRightKey",
-      "onArrowLeftKey",
-      "onHomeKey",
-      "onEndKey",
-      "onPageDownKey",
-      "onPageUpKey",
-      "onEnterKey",
-      "findNextTab",
-      "findPrevTab",
-      "findFirstTab",
-      "findLastTab",
-      "changeActiveValue",
-      "changeFocusedTab",
-      "scrollInView",
-      "active",
-      "id",
-      "ariaControls",
-      "attrs",
-      "asAttrs",
-      "a11yAttrs",
-      "ptParams",
-      "dataP"
-    ]
-  },
-  "tablist": {
-    "vueImports": [
-      "ref",
-      "watch",
-      "computed"
-    ],
-    "methods": [
-      "data",
-      "showNavigators",
-      "handler",
-      "mounted",
-      "if",
-      "updated",
-      "beforeUnmount",
-      "onScroll",
-      "onPrevButtonClick",
-      "onNextButtonClick",
-      "bindResizeObserver",
-      "unbindResizeObserver",
-      "updateInkBar",
-      "updateButtonState",
-      "getVisibleButtonWidths",
-      "templates",
-      "activeValue",
-      "prevButtonAriaLabel",
-      "nextButtonAriaLabel",
-      "dataP"
-    ]
-  },
   "tabmenu": {
     "vueImports": [
       "ref",
@@ -3210,9 +2899,10 @@
     ],
     "methods": [
       "data",
-      "handler",
+      "activeIndex",
       "mounted",
       "updated",
+      "beforeUnmount",
       "getPTOptions",
       "onItemClick",
       "if",
@@ -3235,30 +2925,6 @@
       "getMenuItemProps"
     ]
   },
-  "tabpanel": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "active",
-      "id",
-      "ariaLabelledby",
-      "attrs",
-      "a11yAttrs",
-      "ptParams"
-    ]
-  },
-  "tabs": {
-    "vueImports": [
-      "watch"
-    ],
-    "methods": [
-      "data",
-      "value",
-      "updateValue",
-      "isVertical"
-    ]
-  },
   "tabview": {
     "vueImports": [
       "ref",
@@ -3267,6 +2933,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "activeIndex",
       "mounted",
       "updated",
@@ -3305,14 +2972,6 @@
       "nextButtonAriaLabel"
     ]
   },
-  "tag": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "dataP"
-    ]
-  },
   "terminal": {
     "vueImports": [
       "ref"
@@ -3334,12 +2993,10 @@
     "methods": [
       "mounted",
       "updated",
-      "beforeUnmount",
       "resize",
-      "if",
       "onInput",
-      "attrs",
-      "dataP"
+      "filled",
+      "ptmParams"
     ]
   },
   "tieredmenu": {
@@ -3354,6 +3011,7 @@
     ],
     "methods": [
       "data",
+      "function",
       "activeItemPath",
       "mounted",
       "beforeUnmount",
@@ -3399,8 +3057,6 @@
       "unbindScrollListener",
       "bindResizeListener",
       "unbindResizeListener",
-      "bindMatchMediaListener",
-      "unbindMatchMediaListener",
       "isItemMatched",
       "isValidItem",
       "isValidSelectedItem",
@@ -3430,20 +3086,12 @@
     ]
   },
   "timeline": {
-    "vueImports": [
-      "computed"
-    ],
     "methods": [
       "getKey",
-      "getPTOptions",
-      "dataP"
+      "getPTOptions"
     ]
   },
   "toast": {
-    "composables": [
-      "useEnter",
-      "useLeave"
-    ],
     "vueImports": [
       "ref",
       "computed"
@@ -3463,18 +3111,7 @@
       "createStyle",
       "and",
       "destroyStyle",
-      "dataP"
-    ]
-  },
-  "toastservice": {
-    "methods": [
-      "install",
-      "remove",
-      "removeGroup",
-      "removeAllGroups"
-    ],
-    "emits": [
-      "remove-all-groups"
+      "attributeSelector"
     ]
   },
   "togglebutton": {
@@ -3484,87 +3121,15 @@
     "methods": [
       "getPTOptions",
       "onChange",
+      "onFocus",
       "onBlur",
       "active",
       "hasLabel",
-      "label",
-      "dataP"
-    ]
-  },
-  "toggleswitch": {
-    "vueImports": [
-      "computed"
-    ],
-    "methods": [
-      "getPTOptions",
-      "onChange",
-      "onFocus",
-      "onBlur",
-      "checked",
-      "dataP"
-    ]
-  },
-  "tooltip": {
-    "composables": [
-      "useEnterEvent",
-      "useEnter",
-      "useLeaveEvent",
-      "useLeave"
-    ],
-    "methods": [
-      "_slicedToArray",
-      "_nonIterableRest",
-      "_unsupportedIterableToArray",
-      "_arrayLikeToArray",
-      "_iterableToArrayLimit",
-      "catch",
-      "_arrayWithHoles",
-      "_defineProperty",
-      "_toPropertyKey",
-      "_toPrimitive",
-      "_typeof",
-      "function",
-      "extend",
-      "updated",
-      "if",
-      "unmounted",
-      "bindEvents",
-      "unbindEvents",
-      "bindScrollListener",
-      "unbindScrollListener",
-      "onMouseEnter",
-      "onMouseLeave",
-      "onFocus",
-      "onBlur",
-      "onClick",
-      "onKeydown",
-      "onWindowResize",
-      "tooltipActions",
-      "addEventListener",
-      "show",
-      "tooltipRemoval",
-      "hide",
-      "getTooltipElement",
-      "getArrowElement",
-      "create",
-      "remove",
-      "align",
-      "getHostOffset",
-      "alignRight",
-      "alignLeft",
-      "alignTop",
-      "alignBottom",
-      "preAlign",
-      "isOutOfBounds",
-      "getTarget",
-      "getModifiers",
-      "reduce"
+      "hasIcon",
+      "label"
     ]
   },
   "tree": {
-    "composables": [
-      "useTreeDragDropService"
-    ],
     "vueImports": [
       "watch",
       "computed"
@@ -3572,44 +3137,22 @@
     "methods": [
       "data",
       "expandedKeys",
-      "mounted",
-      "beforeUnmount",
-      "if",
       "onNodeToggle",
       "onNodeClick",
       "onCheckboxChange",
       "handleSelectionWithMetaKey",
       "handleSelectionWithoutMetaKey",
+      "if",
       "isSingleSelectionMode",
       "isMultipleSelectionMode",
       "isNodeSelected",
       "isChecked",
       "isNodeLeaf",
-      "onFilterKeyup",
+      "onFilterKeydown",
       "findFilteredNodes",
       "isFilterMatched",
-      "onNodeDrop",
-      "onNodeDragEnter",
-      "onNodeDragLeave",
-      "onValueChanged",
-      "allowDrop",
-      "while",
-      "allowNodeDrop",
-      "hasCommonScope",
-      "for",
-      "isValidDragScope",
-      "isSameTreeScope",
-      "onDragOver",
-      "onDragEnter",
-      "onDragLeave",
-      "processTreeDrop",
-      "onDrop",
       "filteredValue",
-      "valueToRender",
-      "empty",
-      "emptyMessageText",
-      "containerDataP",
-      "wrapperDataP"
+      "valueToRender"
     ]
   },
   "treeselect": {
@@ -3622,7 +3165,6 @@
       "data",
       "function",
       "options",
-      "expandedKeys",
       "beforeUnmount",
       "if",
       "mounted",
@@ -3631,12 +3173,10 @@
       "onFocus",
       "onBlur",
       "onClick",
-      "onClearClick",
       "onSelectionChange",
       "onNodeSelect",
       "onNodeUnselect",
       "onNodeToggle",
-      "getSelectedItemsLabel",
       "onFirstHiddenFocus",
       "onLastHiddenFocus",
       "onKeyDown",
@@ -3661,23 +3201,19 @@
       "overlayRef",
       "onOverlayClick",
       "onOverlayKeydown",
-      "fillNodeMap",
+      "findSelectedNodes",
+      "for",
       "isSelected",
       "updateTreeState",
       "updateTreeBranchState",
-      "for",
       "expandPath",
       "scrollValueInView",
-      "nodeMap",
       "selectedNodes",
       "label",
-      "chipSelectedItems",
       "emptyMessageText",
       "emptyValue",
       "emptyOptions",
-      "listId",
-      "hasFluid",
-      "isClearIconVisible"
+      "listId"
     ],
     "emits": [
       "before-show",
@@ -3701,6 +3237,8 @@
       "sortField",
       "sortOrder",
       "multiSortMeta",
+      "mounted",
+      "updated",
       "beforeUnmount",
       "columnProp",
       "ptHeaderCellOptions",
@@ -3711,7 +3249,6 @@
       "handleSelectionWithoutMetaKey",
       "if",
       "onCheckboxChange",
-      "onRowRightClick",
       "isSingleSelectionMode",
       "isMultipleSelectionMode",
       "onPage",
@@ -3735,16 +3272,14 @@
       "onColumnResize",
       "onColumnResizeEnd",
       "resizeTableCells",
-      "child",
       "bindColumnResizeEvents",
       "unbindColumnResizeEvents",
       "onColumnKeyDown",
       "hasColumnFilter",
       "hasFilters",
       "hasGlobalFilter",
+      "updateScrollWidth",
       "getItemLabel",
-      "createStyleElement",
-      "destroyStyleElement",
       "setTabindex",
       "columns",
       "processedData",
@@ -3757,38 +3292,22 @@
       "singleSelectionMode",
       "multipleSelectionMode",
       "rowSelectionMode",
-      "totalRecordsLength",
-      "dataP"
+      "totalRecordsLength"
     ]
   },
-  "useconfirm": {
-    "composables": [
-      "useConfirm"
+  "tristatecheckbox": {
+    "vueImports": [
+      "computed"
     ],
     "methods": [
-      "useConfirm"
-    ]
-  },
-  "usedialog": {
-    "composables": [
-      "useDialog"
-    ],
-    "methods": [
-      "useDialog"
-    ]
-  },
-  "usetoast": {
-    "composables": [
-      "useToast"
-    ],
-    "methods": [
-      "useToast"
-    ]
-  },
-  "utils": {
-    "methods": [
-      "blockBodyScroll",
-      "unblockBodyScroll"
+      "getPTOptions",
+      "updateModel",
+      "onChange",
+      "onFocus",
+      "onBlur",
+      "active",
+      "checked",
+      "ariaValueLabel"
     ]
   },
   "virtualscroller": {
@@ -3801,7 +3320,7 @@
       "data",
       "numToleratedItems",
       "loading",
-      "handler",
+      "items",
       "itemSize",
       "orientation",
       "scrollHeight",
@@ -3810,13 +3329,13 @@
       "updated",
       "unmounted",
       "viewInit",
-      "if",
       "init",
       "isVertical",
       "isHorizontal",
       "isBoth",
       "scrollTo",
       "scrollToIndex",
+      "if",
       "scrollInView",
       "getRenderedRange",
       "calculateNumItems",

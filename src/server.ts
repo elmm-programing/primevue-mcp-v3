@@ -2,6 +2,12 @@ import express, { Request, Response } from "express";
 import fs from "fs";
 import path from "path";
 import cors from "cors";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const isDist = __dirname.includes(path.join("dist", "src"));
+
 import { 
   ComponentQuerySchema, 
   ComponentParamsSchema, 
@@ -21,7 +27,7 @@ import {
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DATA_PATH = path.resolve("data/combined.json");
+const DATA_PATH = path.resolve(__dirname, isDist ? "../../data/combined.json" : "../data/combined.json");
 
 // Middlewares
 app.use(cors());
@@ -156,10 +162,10 @@ app.get("/", (_: Request, res: Response) => {
 /**
  * List all components or filter by query
  */
-app.get("/mcp/components", validateQuery(ComponentQuerySchema), (req: ComponentListRequest, res: Response) => {
+app.get("/mcp/components", validateQuery(ComponentQuerySchema), (req: Request, res: Response) => {
   try {
     const data = getDataset();
-    const { q } = req.validatedQuery;
+    const { q } = (req as unknown as ComponentListRequest).validatedQuery;
     
     // Create cache key based on query
     const cacheKey = q ? `components:${q}` : "components:all";
@@ -211,11 +217,11 @@ app.get("/mcp/components", validateQuery(ComponentQuerySchema), (req: ComponentL
 app.get("/mcp/component/:name", 
   validateParams(ComponentParamsSchema), 
   validateQuery(ComponentSectionQuerySchema), 
-  (req: ComponentDetailRequest, res: Response) => {
+  (req: Request, res: Response) => {
   try {
     const data = getDataset();
-    const { name } = req.validatedParams;
-    const { section } = req.validatedQuery;
+    const { name } = (req as unknown as ComponentDetailRequest).validatedParams;
+    const { section } = (req as unknown as ComponentDetailRequest).validatedQuery;
 
     const comp = data[name.toLowerCase()] || data[name];
     if (!comp) {
@@ -249,10 +255,10 @@ app.get("/mcp/component/:name",
 /**
  * Get global design tokens
  */
-app.get("/mcp/tokens", validateQuery(TokensQuerySchema), (req: TokensRequest, res: Response) => {
+app.get("/mcp/tokens", validateQuery(TokensQuerySchema), (req: Request, res: Response) => {
   try {
     const data = getDataset();
-    const { q } = req.validatedQuery;
+    const { q } = (req as unknown as TokensRequest).validatedQuery;
     
     // Create cache key based on query
     const cacheKey = q ? `tokens:${q}` : "tokens:all";
@@ -289,10 +295,10 @@ app.get("/mcp/tokens", validateQuery(TokensQuerySchema), (req: TokensRequest, re
 /**
  * Global search across components and tokens
  */
-app.get("/mcp/search", validateQuery(SearchQuerySchema), (req: SearchRequest, res: Response) => {
+app.get("/mcp/search", validateQuery(SearchQuerySchema), (req: Request, res: Response) => {
   try {
     const data = getDataset();
-    const { q } = req.validatedQuery;
+    const { q } = (req as unknown as SearchRequest).validatedQuery;
     
     // Create cache key based on search query
     const cacheKey = `search:${q}`;
